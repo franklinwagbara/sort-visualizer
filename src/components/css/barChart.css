@@ -1,0 +1,8 @@
+.bar-chart {
+  width: 600px;
+  height: 608px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}

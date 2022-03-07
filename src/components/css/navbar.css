@@ -1,0 +1,12 @@
+.nav-bar {
+  width: 100vw;
+  height: 50px;
+  background-color: rgb(3, 36, 59);
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar h3 {
+  color: wheat;
+  margin-left: 50px;
+}

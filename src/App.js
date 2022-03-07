@@ -1,13 +1,21 @@
-import React, { Component } from "react";
+import { delay } from "lodash";
 import "./App.css";
-import Game from "./components/game";
+import React, { Component } from "react";
+import InsertionSort from "./components/insertionSort";
+import NavBar from "./components/navBar";
+import Simulator from "./components/simulator";
 
 class App extends Component {
-  state = {};
+  state = {
+    play: false,
+    restart: false,
+  };
+
   render() {
     return (
       <div>
-        <Game />
+        <NavBar />
+        <Simulator />
       </div>
     );
   }

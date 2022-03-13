@@ -12,8 +12,17 @@ class App extends Component {
     items: Array.from({ length: 15 }, () => Math.floor(Math.random() * 100)),
   };
 
+  handleChangeInputSize = (value) => {
+    console.log("change size", value);
+    const items = Array.from({ length: value }, () =>
+      Math.floor(Math.random() * 100)
+    );
+    this.setState({ items: items });
+  };
+
   render() {
     const { speed, items } = this.state;
+    console.log(items);
     return (
       <div>
         <div>
@@ -21,10 +30,10 @@ class App extends Component {
         </div>
         <div className="main">
           <div className="main-simulator">
-            <Simulator speed={speed} items={items} />
+            <Simulator key={items} speed={speed} items={items} />
           </div>
           <div className="main-setting">
-            <Settings />
+            <Settings onChangeInputSize={this.handleChangeInputSize} />
           </div>
         </div>
       </div>

@@ -6,7 +6,7 @@ class BarChart extends Component {
   state = {
     maxWidth: 600,
     maxHeight: 600,
-    barSpace: 3,
+    barSpace: 2,
     items: this.props.items,
   };
 

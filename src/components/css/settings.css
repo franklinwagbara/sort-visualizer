@@ -4,3 +4,7 @@
   justify-content: center;
   align-items: center;
 }
+
+.settings i {
+  font-size: 0.8rem;
+}

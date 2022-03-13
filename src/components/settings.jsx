@@ -9,8 +9,13 @@ class Settings extends Component {
       <div className="settings">
         <h5>Settings</h5>
         <div>
-          <i>Adjust Array Size</i>
-          <Slider />
+          <i>Adjust Input Size</i>
+          <Slider
+            start={0}
+            mid={50}
+            end={100}
+            onChangeInputSize={this.props.onChangeInputSize}
+          />
         </div>
       </div>
     );

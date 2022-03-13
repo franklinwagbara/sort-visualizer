@@ -53,7 +53,7 @@ class InsertionSort extends Component {
   };
 
   render() {
-    const { items, count, play } = this.state;
+    const { items } = this.state;
     return (
       <div>
         <BarChart key={items} items={items} />

@@ -3,23 +3,16 @@ import InsertionSort from "./insertionSort";
 
 class Simulator extends Component {
   state = {
-    speed: 100,
-    items: Array.from({ length: 15 }, () => Math.floor(Math.random() * 100)),
+    speed: this.props.speed,
+    items: this.props.items,
   };
 
   render() {
     const { items, speed } = this.state;
-    const { play, onStop, onSimulate } = this.props;
     return (
       <div>
-        <div className="main-area">
-          <InsertionSort
-            key={play}
-            onStop={() => onStop()}
-            items={items}
-            speed={speed}
-            play={play}
-          />
+        <div>
+          <InsertionSort items={items} speed={speed} />
         </div>
       </div>
     );

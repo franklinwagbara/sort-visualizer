@@ -1,7 +1,6 @@
 const insertion_Sort = (A) => {
   const transition = [];
   const items = [...A];
-  let part = 0;
 
   for (var i = 1; i < items.length; i++) {
     var temp = items[i];

@@ -7,6 +7,7 @@ import selectionSort from "./utils/selectionSort";
 import insertion_Sort from "./utils/insertion_Sort";
 import bubbleSort from "./utils/bubbleSort";
 import Navbar from "./utils/components/navbar";
+import quickSort from "./utils/quickSort";
 
 class App extends Component {
   state = {
@@ -21,6 +22,7 @@ class App extends Component {
     Insertion: insertion_Sort,
     Selection: selectionSort,
     Bubble: bubbleSort,
+    Quick: quickSort,
   };
 
   handleInputSizeChange = (value) => {

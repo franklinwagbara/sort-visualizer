@@ -1,0 +1,38 @@
+.nav-bar {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(3, 36, 59);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.nav-bar-logo {
+  color: whitesmoke;
+}
+
+.nav-items {
+  display: flex;
+  flex-direction: row;
+  color: whitesmoke;
+  margin-right: 30px;
+}
+
+.nav-bar ul li {
+  font-size: 0.9rem;
+  list-style-type: none;
+  padding: 15px;
+  cursor: pointer;
+}
+
+.nav-bar ul li:hover {
+  color: rgba(245, 245, 245, 0.644);
+}
+
+@media screen and (width <= 500px) {
+  .nav-items {
+    display: flex;
+    flex-direction: column;
+  }
+}

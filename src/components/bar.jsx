@@ -13,7 +13,9 @@ class Bar extends Component {
   render() {
     const style = this.style;
     return (
-      <div>
+      <div className="bar">
+        {style.width > 25 ? <span>{Math.round(this.style.height)}</span> : ""}
+
         <div style={style}> </div>
       </div>
     );

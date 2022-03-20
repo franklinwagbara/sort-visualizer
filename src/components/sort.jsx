@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import BarChart from "./barChart";
-import insertion_Sort from "./../utils/insertion_Sort";
 
-class InsertionSort extends Component {
+class Sort extends Component {
   state = {
     items: this.props.items,
     count: 0,
@@ -13,14 +12,17 @@ class InsertionSort extends Component {
   };
 
   trigger() {
-    const { items, speed, max } = this.props;
+    const { items, speed, maxSpeed, onSort } = this.props;
     const { play } = this.state;
     if (!play) return;
-    const transition = insertion_Sort([...items]);
+    const transition = onSort([...items]);
     this.setState(
       { transition },
       () =>
-        (this.state.timerId = setInterval(() => this.transition(), max - speed))
+        (this.state.timerId = setInterval(
+          () => this.transition(),
+          maxSpeed - speed
+        ))
     );
   }
 
@@ -55,6 +57,7 @@ class InsertionSort extends Component {
     const { items } = this.state;
     return (
       <div>
+        <h3>{this.props.SortName + " Sort"}</h3>
         <BarChart key={items} items={items} />
         <button className="simulate-button" onClick={this.simulate}>
           {this.formatSimulateButton()}
@@ -64,4 +67,4 @@ class InsertionSort extends Component {
   }
 }
 
-export default InsertionSort;
+export default Sort;

@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-import InsertionSort from "./insertionSort";
+import Sort from "./sort";
 
 class Simulator extends Component {
-  state = {
-    speed: this.props.speed,
-    items: this.props.items,
-  };
-
   render() {
-    const { items, speed } = this.state;
+    const { items, speed, onSort, SortName, maxSpeed } = this.props;
     return (
       <div>
         <div>
-          <InsertionSort items={items} speed={speed} />
+          <Sort
+            key={items || speed}
+            maxSpeed={maxSpeed}
+            items={items}
+            speed={speed}
+            onSort={onSort}
+            SortName={SortName}
+          />
         </div>
       </div>
     );

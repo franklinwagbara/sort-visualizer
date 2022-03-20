@@ -1,3 +1,6 @@
+body {
+  width: 100vw;
+}
 .main {
   display: flex;
   flex-direction: row;
@@ -11,7 +14,7 @@
 .main-setting {
   background-color: rgb(3, 36, 59);
   height: 250px;
-  width: 250px;
+  width: 300px;
   margin: 5px;
   color: wheat;
   padding: 5px;
@@ -31,4 +34,10 @@
 
 .simulate-button:hover {
   background-color: rgb(5, 53, 87);
+}
+
+@media screen and (width <= 940px) {
+  body {
+    width: fit-content;
+  }
 }

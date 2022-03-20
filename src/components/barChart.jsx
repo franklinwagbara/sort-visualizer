@@ -5,7 +5,7 @@ import "./css/barChart.css";
 class BarChart extends Component {
   state = {
     maxWidth: 600,
-    maxHeight: 600,
+    maxHeight: 550,
     barSpace: 2,
     items: this.props.items,
   };

@@ -12,7 +12,7 @@ class Slider extends Component {
   handleChange = (e) => {
     console.log(this.state.pointer);
     this.setState({ pointer: e.target.value }, () =>
-      this.props.onChangeInputSize(e.target.value)
+      this.props.onSliderChange(e.target.value)
     );
   };
   render() {

@@ -5,7 +5,7 @@ class NavBar extends Component {
   state = {};
   render() {
     return (
-      <div className="nav-bar">
+      <div className="navbar">
         <h3>Sort Visualizer</h3>
       </div>
     );
